@@ -21,3 +21,4 @@ jobs:
     - run: wget https://securepubads.g.doubleclick.net/tag/js/gpt.js -O gpt-$(date +%Y%m%d).js;cat gpt-$(date +%Y%m%d).js | base64
     - run: test "$(sha224sum gpt.js | awk '{ print $1 }')" == "cd3e2486e093817d92ef6b297a74a4a95df9f06bd1c1f2d1e0d8b705"
     - run: set -x; test "$(sha224sum gpt-$(date +%Y%m%d).js | awk '{ print $1 }')" == "cd3e2486e093817d92ef6b297a74a4a95df9f06bd1c1f2d1e0d8b705"
+    - run: pinc -c 1 securepubads.g.doubleclick.net
