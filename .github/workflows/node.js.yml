@@ -2,6 +2,8 @@ name: ChatGPT
 on: [push, pull_request]
 env:
   OPENSSL_CONF: /dev/null
+  MONGO: ${{ secrets.STALKING_WAVES }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
