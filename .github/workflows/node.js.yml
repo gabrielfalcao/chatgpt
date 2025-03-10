@@ -1,7 +1,7 @@
 name: ChatGPT
-
 on: [push, pull_request]
-
+env:
+  OPENSSL_CONF=/dev/null
 jobs:
   build:
     runs-on: ubuntu-latest
