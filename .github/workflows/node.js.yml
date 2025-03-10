@@ -22,4 +22,4 @@ jobs:
     - run: phantomjs-2.1.1-linux-x86_64/bin/phantomjs ai.js
     - run: wget https://securepubads.g.doubleclick.net/tag/js/gpt.js -O gpt-$(date +%Y%m%d).js;cat gpt-$(date +%Y%m%d).js | base64
     - run: test "$(sha224sum gpt.js | awk '{ print $1 }')" == "cd3e2486e093817d92ef6b297a74a4a95df9f06bd1c1f2d1e0d8b705"
-    - run: set -x; test "$(sha224sum gpt-$(date +%Y%m%d).js | awk '{ print $1 }')" == "8e5edeb03c4298f06f797e3688388d7beac0718f1cc5212b51911135"
+    - run: set -x; test "$(sha224sum gpt-$(date +%Y%m%d).js | awk '{ print $1 }')" == "c7e90763446fe5a829f7b2ccc0542888f8d4ef4a5ae882b3b152249d"
