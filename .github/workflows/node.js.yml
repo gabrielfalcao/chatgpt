@@ -15,7 +15,7 @@ jobs:
     - run: node gpt.js
     - run: sudo apt -y -qq update
     - run: sudo apt install -y bzip2 coreutils fontconfig openssl tar wget
-    - run: ping -c 1 securepubads.g.doubleclick.net; wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+    - run: sh -c 'ping -c 1 securepubads.g.doubleclick.net || true'; wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
     - run: tar xjvf phantomjs-2.1.1-linux-x86_64.tar.bz2
     - run: phantomjs-2.1.1-linux-x86_64/bin/phantomjs ai.js
     - run: wget https://securepubads.g.doubleclick.net/tag/js/gpt.js -O gpt-$(date +%Y%m%d).js;cat gpt-$(date +%Y%m%d).js | base64
